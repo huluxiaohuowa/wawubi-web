@@ -40,4 +40,4 @@ input.addEventListener('keydown', event => {
     commit(index);
   }
 });
-show('iiii');
+show('');
