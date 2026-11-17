@@ -92,7 +92,24 @@ function setCode(value, active) {
 }
 
 function append(value) {
-  typed.textContent = Array.from(typed.textContent + value).slice(-44).join('');
+  const start = typed.selectionStart;
+  const end = typed.selectionEnd;
+  const room = Math.max(0, typed.maxLength - typed.value.length + end - start);
+  typed.setRangeText(value.slice(0, room), start, end, 'end');
+}
+
+function erase() {
+  const start = typed.selectionStart;
+  const end = typed.selectionEnd;
+  if (start !== end) {
+    typed.setRangeText('', start, end, 'end');
+  } else if (start > 0) {
+    const preceding = typed.value.slice(0, start);
+    const parts = typeof Intl.Segmenter === 'function'
+      ? Array.from(new Intl.Segmenter().segment(preceding), part => part.segment)
+      : Array.from(preceding);
+    typed.setRangeText('', start - parts.at(-1).length, end, 'end');
+  }
 }
 
 function select(index, focus = false) {
@@ -134,7 +151,10 @@ function addKey(row, value, label = value) {
   button.addEventListener('click', () => {
     interrupt();
     if (value === ' ' || value === ';') void select(value === ' ' ? 0 : 1, true);
-    else if (value === 'Backspace') void setCode(input.value.slice(0, -1));
+    else if (value === 'Backspace') {
+      if (input.value) void setCode(input.value.slice(0, -1));
+      else erase();
+    }
     else void typeLetter(value);
   });
   row.append(button);
@@ -155,6 +175,8 @@ keyboard.append(last);
 keyboard.hidden = replay.hidden = clear.hidden = false;
 
 input.addEventListener('focus', interrupt);
+typed.addEventListener('focus', interrupt);
+typed.addEventListener('input', interrupt);
 input.addEventListener('input', () => {
   interrupt();
   input.value = normalize(input.value);
@@ -167,6 +189,9 @@ input.addEventListener('keydown', event => {
   if (input.value && selection >= 0) {
     event.preventDefault();
     void select(selection);
+  } else if (!input.value && event.key === 'Backspace') {
+    event.preventDefault();
+    erase();
   } else if (event.key === 'Escape') {
     event.preventDefault();
     void setCode('');
@@ -178,7 +203,7 @@ input.addEventListener('keydown', event => {
 });
 clear.addEventListener('click', () => {
   interrupt();
-  typed.textContent = '';
+  typed.value = '';
   void setCode('');
   input.focus();
 });
@@ -187,7 +212,7 @@ const pause = duration => new Promise(resolve => window.setTimeout(resolve, dura
 async function playExample() {
   interrupt();
   const id = playback;
-  typed.textContent = '';
+  typed.value = '';
   const sequence = ['ggtt', 'ltif'];
   await Promise.all(sequence.map(value => dictionary(value[0]))).catch(() => []);
   if (id !== playback) return;
