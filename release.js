@@ -33,7 +33,7 @@
       let baseline = parseVersion(button.dataset.version) ?? [0, 0, 0];
       for (const release of releases) {
         const tag = release?.tag_name;
-        if (release?.draft || typeof tag !== 'string' || !tag.startsWith('v')) continue;
+        if (release?.draft || release?.prerelease || typeof tag !== 'string' || !tag.startsWith('v')) continue;
         const version = tag.slice(1);
         const parts = parseVersion(version);
         if (!parts || !isNewer(parts, baseline) || !Array.isArray(release.assets)) continue;
@@ -43,13 +43,13 @@
         if (!release.assets.some(asset => asset?.name === file &&
           asset.state === 'uploaded' && asset.size > 0 && asset.browser_download_url === url)) continue;
 
-        newest = { url, version, preview: release.prerelease };
+        newest = { url, version };
         baseline = parts;
       }
       if (newest) {
         button.href = newest.url;
         button.dataset.version = newest.version;
-        button.textContent = '下载 ' + newest.version + (newest.preview ? ' 预览版' : '');
+        button.textContent = '下载 ' + newest.version;
       }
     } catch {
       // The page already has a verified installer link.
