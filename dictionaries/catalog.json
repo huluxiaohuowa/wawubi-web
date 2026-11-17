@@ -1,0 +1,26 @@
+[
+  {
+    "id": "district",
+    "name": "行政区划",
+    "version": "4d08110",
+    "file": "district.tsv",
+    "sha256": "b4745db84493d4b6ed764fdd1fccd626311abc6352fb24671f2575977d166b24",
+    "source": "https://github.com/KyleBing/rime-wubi86-jidian"
+  },
+  {
+    "id": "it",
+    "name": "计算机",
+    "version": "a30ce79-1",
+    "file": "it.tsv",
+    "sha256": "308d546b6d602ac089095062f56cd1755f527af073ecef8612d6056b743f7d80",
+    "source": "https://github.com/thunlp/THUOCL"
+  },
+  {
+    "id": "medical",
+    "name": "医学",
+    "version": "a30ce79-1",
+    "file": "medical.tsv",
+    "sha256": "3a41712e1356188bfa0495dfa515d3e84dcd2a166062eddf70be17eccd1246b8",
+    "source": "https://github.com/thunlp/THUOCL"
+  }
+]
