@@ -7,6 +7,7 @@ import urllib.request
 
 RIME = "https://raw.githubusercontent.com/rime/rime-wubi/152a0d3f3efe40cae216d1e3b338242446848d07/"
 JIDIAN = "https://raw.githubusercontent.com/KyleBing/rime-wubi86-jidian/4d08110b8080f6577dad733ada7e5ae5c5e878fd/"
+LUNA = "https://raw.githubusercontent.com/rime/rime-luna-pinyin/56b934b099dfbeab842320f13aa8b461a6ab3e42/"
 THU = "https://raw.githubusercontent.com/thunlp/THUOCL/a30ce79d895d01ab5132a5c74c29703ff7efb4cc/"
 OUTPUT = pathlib.Path(__file__).resolve().parents[1] / "dictionaries"
 
@@ -53,6 +54,21 @@ def publish(items, identifier, name, version, source, rows):
                       sha256=hashlib.sha256(payload).hexdigest(), source=source))
     print(f"{identifier}: {len(rows)}")
 
+def rime_phrases(url, stems):
+    words = set()
+    data = read(url)
+    for line in data.partition("\n...")[2].splitlines():
+        if not line or line.startswith("#"):
+            continue
+        word, *fields = line.split("\t")
+        if not 2 <= len(word) <= 64 or word in words:
+            continue
+        code = encode(word, stems)
+        if code and valid(code):
+            weight = int(fields[1]) if len(fields) > 1 and fields[1].isdigit() else 0
+            words.add(word)
+            yield word, code, weight
+
 def main():
     OUTPUT.mkdir(exist_ok=True)
     items = []
@@ -63,6 +79,16 @@ def main():
         if len(fields) >= 2 and not line.startswith("#") and valid(fields[1]):
             district.append((fields[0], fields[1], 0))
     publish(items, "district", "行政区划", "4d08110", "https://github.com/KyleBing/rime-wubi86-jidian", district)
+    rime_packages = [
+        ("jidian-phrases", "极点五笔 · 常用词组", "4d08110-1",
+         "https://github.com/KyleBing/rime-wubi86-jidian", JIDIAN + "wubi86_jidian.dict.yaml"),
+        ("jidian-extra", "极点五笔 · 分类扩展", "4d08110-1",
+         "https://github.com/KyleBing/rime-wubi86-jidian", JIDIAN + "wubi86_jidian_extra.dict.yaml"),
+        ("luna-phrases", "朙月拼音 · 传统用字词组", "56b934b-1",
+         "https://github.com/rime/rime-luna-pinyin", LUNA + "luna_pinyin.dict.yaml"),
+    ]
+    for identifier, name, version, source, url in rime_packages:
+        publish(items, identifier, name, version, source, list(rime_phrases(url, stems)))
     categories = [
         ("it", "计算机", "IT"),
         ("medical", "医学", "medical"),

@@ -8,6 +8,30 @@
     "source": "https://github.com/KyleBing/rime-wubi86-jidian"
   },
   {
+    "id": "jidian-phrases",
+    "name": "极点五笔 · 常用词组",
+    "version": "4d08110-1",
+    "file": "jidian-phrases.tsv",
+    "sha256": "7b5ba2c12cd5d0077d5c45552284600c9b187b81db46166af0a2939bad427c0a",
+    "source": "https://github.com/KyleBing/rime-wubi86-jidian"
+  },
+  {
+    "id": "jidian-extra",
+    "name": "极点五笔 · 分类扩展",
+    "version": "4d08110-1",
+    "file": "jidian-extra.tsv",
+    "sha256": "ae9bf22ac1adb2b51bd84a919e31b89f73cbfc8219fa82e9bf0134d4c70e5392",
+    "source": "https://github.com/KyleBing/rime-wubi86-jidian"
+  },
+  {
+    "id": "luna-phrases",
+    "name": "朙月拼音 · 传统用字词组",
+    "version": "56b934b-1",
+    "file": "luna-phrases.tsv",
+    "sha256": "27491629e09d6b8e20ce5f8b668b6fdfc7cee34279be267e25923b946130a04d",
+    "source": "https://github.com/rime/rime-luna-pinyin"
+  },
+  {
     "id": "it",
     "name": "计算机",
     "version": "a30ce79-1",
