@@ -22,5 +22,77 @@
     "file": "medical.tsv",
     "sha256": "3a41712e1356188bfa0495dfa515d3e84dcd2a166062eddf70be17eccd1246b8",
     "source": "https://github.com/thunlp/THUOCL"
+  },
+  {
+    "id": "idioms",
+    "name": "成语",
+    "version": "a30ce79-1",
+    "file": "idioms.tsv",
+    "sha256": "9fd3264f7c2af4825bf2e46a4c2be94956f5a0029b65c1f8945c72704322bfc6",
+    "source": "https://github.com/thunlp/THUOCL"
+  },
+  {
+    "id": "finance",
+    "name": "财经",
+    "version": "a30ce79-1",
+    "file": "finance.tsv",
+    "sha256": "4d68930ff74fdb96d46bdb27b0d2fd5e9f7705ed22a218119502ba85fe017d8b",
+    "source": "https://github.com/thunlp/THUOCL"
+  },
+  {
+    "id": "law",
+    "name": "法律",
+    "version": "a30ce79-1",
+    "file": "law.tsv",
+    "sha256": "1d88fb60c3f96108d6de613a5ae920b6061568a1be36638cddcde59eb58363dc",
+    "source": "https://github.com/thunlp/THUOCL"
+  },
+  {
+    "id": "food",
+    "name": "饮食",
+    "version": "a30ce79-1",
+    "file": "food.tsv",
+    "sha256": "a524ddfd8ecedc12c44dd61c5cdc5e4c9eb3acb9a36163ba64f69e363da6e30e",
+    "source": "https://github.com/thunlp/THUOCL"
+  },
+  {
+    "id": "places",
+    "name": "地名",
+    "version": "a30ce79-1",
+    "file": "places.tsv",
+    "sha256": "b46a730bbafd8e0cac1844a2b1fdef38038efb42240c7ed44888a5f92474787f",
+    "source": "https://github.com/thunlp/THUOCL"
+  },
+  {
+    "id": "animals",
+    "name": "动物",
+    "version": "a30ce79-1",
+    "file": "animals.tsv",
+    "sha256": "37d779653c540ccc1ab1ff58cee161f298af5eca54949edad43cb96ecc9d60a8",
+    "source": "https://github.com/thunlp/THUOCL"
+  },
+  {
+    "id": "automotive",
+    "name": "汽车",
+    "version": "a30ce79-1",
+    "file": "automotive.tsv",
+    "sha256": "657627638e2ec6edd3de4c207d5e3e8be97ea43f1e6ff0f7dc70115b12576c48",
+    "source": "https://github.com/thunlp/THUOCL"
+  },
+  {
+    "id": "historical-people",
+    "name": "历史人物",
+    "version": "a30ce79-1",
+    "file": "historical-people.tsv",
+    "sha256": "144f828c3dda8ad14c2a759a4c2aebc8c2f9aa1eb237b3967cbea878a422265e",
+    "source": "https://github.com/thunlp/THUOCL"
+  },
+  {
+    "id": "poetry",
+    "name": "诗词",
+    "version": "a30ce79-1",
+    "file": "poetry.tsv",
+    "sha256": "ca675ab10b4e55adaaa075ea2143c8fd06bfd8b53d46865b5a401ecda6b2695e",
+    "source": "https://github.com/thunlp/THUOCL"
   }
 ]

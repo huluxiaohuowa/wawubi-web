@@ -63,7 +63,20 @@ def main():
         if len(fields) >= 2 and not line.startswith("#") and valid(fields[1]):
             district.append((fields[0], fields[1], 0))
     publish(items, "district", "行政区划", "4d08110", "https://github.com/KyleBing/rime-wubi86-jidian", district)
-    for identifier, name, filename in [("it", "计算机", "IT"), ("medical", "医学", "medical")]:
+    categories = [
+        ("it", "计算机", "IT"),
+        ("medical", "医学", "medical"),
+        ("idioms", "成语", "chengyu"),
+        ("finance", "财经", "caijing"),
+        ("law", "法律", "law"),
+        ("food", "饮食", "food"),
+        ("places", "地名", "diming"),
+        ("animals", "动物", "animal"),
+        ("automotive", "汽车", "car"),
+        ("historical-people", "历史人物", "lishimingren"),
+        ("poetry", "诗词", "poem"),
+    ]
+    for identifier, name, filename in categories:
         rows = []
         for line in read(THU + "data/THUOCL_" + filename + ".txt").splitlines():
             fields = line.strip().split()
