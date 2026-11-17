@@ -112,10 +112,25 @@ function erase() {
   }
 }
 
-function select(index, focus = false) {
+let shortcutRequest;
+function shortcutAliases() {
+  shortcutRequest ??= fetch('./demo-data/shortcuts.json')
+    .then(response => {
+      if (!response.ok) throw new Error('Shortcuts unavailable');
+      return response.json();
+    }).catch(error => {
+      shortcutRequest = undefined;
+      throw error;
+    });
+  return shortcutRequest;
+}
+
+function select(selection, focus = false) {
   const code = input.value;
   if (!code) return Promise.resolve(false);
-  return rowsFor(code).then(rows => {
+  const aliases = selection === ';' && code.length === 1 ? shortcutAliases() : [];
+  return Promise.all([rowsFor(code), aliases]).then(([rows, shortcuts]) => {
+    const index = selection === ';' ? (shortcuts.includes(code) ? 0 : 1) : selection;
     if (input.value !== code || !rows[index]) return false;
     append(rows[index][0]);
     void setCode('');
@@ -150,7 +165,7 @@ function addKey(row, value, label = value) {
   if (value === 'Backspace') button.classList.add('key-wide');
   button.addEventListener('click', () => {
     interrupt();
-    if (value === ' ' || value === ';') void select(value === ' ' ? 0 : 1, true);
+    if (value === ' ' || value === ';') void select(value === ' ' ? 0 : ';', true);
     else if (value === 'Backspace') {
       if (input.value) void setCode(input.value.slice(0, -1));
       else erase();
@@ -184,9 +199,9 @@ input.addEventListener('input', () => {
 });
 input.addEventListener('keydown', event => {
   if (event.isComposing || event.ctrlKey || event.metaKey || event.altKey) return;
-  const selection = event.key === ' ' ? 0 : event.key === ';' ? 1 :
+  const selection = event.key === ' ' ? 0 : event.key === ';' ? ';' :
     /^[1-9]$/.test(event.key) ? Number(event.key) - 1 : -1;
-  if (input.value && selection >= 0) {
+  if (input.value && selection !== -1) {
     event.preventDefault();
     void select(selection);
   } else if (!input.value && event.key === 'Backspace') {
