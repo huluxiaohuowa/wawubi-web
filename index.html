@@ -3,57 +3,85 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#162d29">
-<meta name="description" content="WA 五笔，为 macOS 打造的原生 86 五笔输入法。">
+<meta name="theme-color" content="#17162b">
+<meta name="description" content="WA 五笔，为 macOS 原生开发的 86 五笔输入法。">
 <link rel="canonical" href="https://wa-wubi.fuluwa.top/">
 <link rel="icon" type="image/png" href="logo.png">
 <link rel="stylesheet" href="style.css">
 <script src="demo.js" defer></script>
-<title>WA 五笔 · 原生 macOS 五笔输入法</title>
+<title>WA 五笔 · macOS 原生 86 五笔输入法</title>
 </head>
 <body>
 <header class="shell masthead">
-<a href="./" class="wordmark"><img src="logo.png" width="38" height="38" alt=""> WA 五笔</a>
-<nav aria-label="主导航"><a href="#features">功能</a><a href="#install">安装</a><a href="https://github.com/huluxiaohuowa/wa-wubi">GitHub ↗</a></nav>
+<a href="./" class="wordmark"><img src="logo.png" width="36" height="36" alt=""> WA 五笔</a>
+<nav aria-label="主导航"><a href="#try">在线试打</a><a href="#features">功能</a><a href="https://github.com/huluxiaohuowa/wa-wubi">GitHub</a></nav>
 </header>
 <main>
 <section class="shell hero">
 <div class="intro">
-<p class="kicker">macOS 原生输入法</p>
-<h1>WA 五笔<span>.</span></h1>
-<p class="subtitle">熟悉的 86 五笔，<br>顺手的 Mac 输入体验。</p>
-<a class="button" href="#install">获取 WA 五笔 <span aria-hidden="true">↓</span></a>
+<h1>把五笔带到<br>你的 <span lang="en">Mac</span></h1>
+<p>原生 86 五笔，熟悉的键位。<br>候选窗和词库，按自己的习惯来。</p>
+<a class="primary" href="#install">下载 WA 五笔</a>
 </div>
-<div class="workbench">
-<div class="window">
-<div class="titlebar"><span aria-hidden="true" class="lights"><i></i><i></i><i></i></span><span>四键字练习</span></div>
-<div class="demo">
-<p class="demo-label" id="demo-label">任选一个键名键，连按四次，再按 <kbd>;</kbd></p>
-<div class="paper"><span id="typed"></span><span id="caret" aria-hidden="true"></span></div>
-<div class="candidate" aria-live="polite"><code id="code">—</code><div id="choices"></div></div>
-<label class="sr-only" for="play">四键字练习输入区</label>
-<input id="play" autocomplete="off" autocapitalize="off" spellcheck="false" maxlength="5" placeholder="点击这里试打">
-<p class="local">网页练习 · 按键仅在本页处理</p>
+<div id="try" class="stage" aria-labelledby="practice-title">
+<header class="stage-head">
+<h2 id="practice-title">在线试打</h2>
+<button class="quiet" id="replay" type="button" hidden>重播演示</button>
+</header>
+<div class="type-area">
+<div id="typed" class="typed" aria-live="polite" aria-label="已上屏文字"></div>
+<label class="visually-hidden" for="play">五笔编码</label>
+<input id="play" autocomplete="off" autocapitalize="off" spellcheck="false" maxlength="4" inputmode="text" placeholder="输入 1 至 4 位五笔编码">
+<div class="candidate" aria-label="候选">
+<code id="code">—</code><div id="choices" class="choices"><span class="waiting">输入后显示候选</span></div>
 </div>
+</div>
+<div class="keys" id="keys" aria-label="演示键盘" hidden></div>
+<div class="stage-foot"><span><kbd>空格</kbd> 首选</span><span><kbd>;</kbd> 次选</span><button class="quiet" id="clear" type="button" hidden>清空</button></div>
+<noscript><p class="waiting">开启 JavaScript 即可在线试打。</p></noscript>
+</div>
+</section>
+
+<section class="features" id="features">
+<div class="shell feature-layout">
+<h2>按你的习惯，<br>设置五笔</h2>
+<div class="feature-list">
+<article>
+<h3>从第一键开始选字</h3>
+<p>一到四键均可查码。默认排序下，单键时键名汉字在第二位，按分号选择。同键四连的全码中，键名汉字排第一。</p>
+</article>
+<article>
+<h3>候选窗和中英切换</h3>
+<p>调整候选数量、透明度、字号与横竖布局。轻按 Shift 切换中英，也能为常用应用设定默认语言。</p>
+</article>
+<article>
+<h3>带上自己的词库</h3>
+<p>导入搜狗细胞词库、Rime 码表或文本词表。支持在线词库、手动加词，以及通过 iCloud Drive 同步设置。</p>
+</article>
+<article>
+<h3>按住说话，松手上屏</h3>
+<p>启用语音后，按住 Control + Shift 录音。可选择 Apple Speech 或兼容的云转写服务。</p>
+</article>
 </div>
 </div>
 </section>
-<section class="details" id="features">
-<div class="shell">
-<h2>把常用的操作，放在手边。</h2>
-<div class="grid">
-<article><div class="motif"><kbd>;</kbd></div><h3>分号选第二项</h3><p>86 五笔键名汉字固定排在第二候选，按分号即可选择。</p></article>
-<article><div class="motif"><kbd>⇧ Shift</kbd></div><h3>轻按切换中英</h3><p>点按 Shift 即可切换中英。启用语音后，按住 Control + Shift 录音，松手自动转写。</p></article>
-<article><div class="motif"><span aria-hidden="true">◐</span></div><h3>候选窗随手调</h3><p>调节透明度和字号，选择横排或竖排。候选窗随光标移动，并适配系统明暗外观。</p></article>
-<article><div class="motif"><span aria-hidden="true">＋</span></div><h3>把自己的词库带过来</h3><p>导入搜狗细胞词库、Rime 码表和常用文本词表。通过 iCloud Drive 同步词库、候选排序和输入设置，开启时可选合并或直接采用 iCloud 的内容。</p></article>
-</div>
-</div>
-</section>
+
 <section class="shell install" id="install">
-<div><h2>安装 WA 五笔</h2><p>支持 macOS 13 及以上版本，适用于 Apple 芯片和 Intel Mac。</p><a href="https://github.com/huluxiaohuowa/wa-wubi/releases/download/v0.1.4/WA-Wubi-0.1.4.dmg" class="button">下载 0.1.4 预览版 ↓</a></div>
-<ol><li>打开 DMG，双击「安装 WA 五笔」，点击「安装」。</li><li>打开「系统设置」→「键盘」→「文本输入」→「编辑」。</li><li>通过「＋」添加简体中文下的「WA 五笔」，然后在菜单栏切换。首次安装后若列表未刷新，请注销再登录。</li></ol>
+<div>
+<h2>安装 WA 五笔</h2>
+<p>macOS 13 或更新版本，支持 Apple 芯片与 Intel。</p>
+<a class="primary" href="https://github.com/huluxiaohuowa/wa-wubi/releases/download/v0.1.5/WA-Wubi-0.1.5.dmg">下载 0.1.5 预览版</a>
+</div>
+<ol>
+<li>打开 DMG，双击「安装 WA 五笔」。</li>
+<li>前往「系统设置 → 键盘 → 文本输入 → 编辑」，添加 WA 五笔。</li>
+<li>在菜单栏切换到 WA 五笔。首次安装时，如果列表尚未刷新，注销后重新登录。</li>
+</ol>
 </section>
 </main>
-<footer class="shell"><a class="wordmark" href="./"><img src="logo.png" width="38" height="38" alt=""> WA 五笔</a><a href="https://github.com/huluxiaohuowa/wa-wubi/issues">反馈问题 ↗</a></footer>
+<footer class="shell footer">
+<a href="./" class="wordmark"><img src="logo.png" width="36" height="36" alt=""> WA 五笔</a>
+<a href="https://github.com/huluxiaohuowa/wa-wubi/issues">反馈问题</a>
+</footer>
 </body>
 </html>
