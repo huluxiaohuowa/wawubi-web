@@ -90,26 +90,26 @@ nav a:hover, .footer > a:last-child:hover {
 }
 .motion-wash-jade {
   --wash: var(--color-wash-jade);
-  --tempo: 16s;
-  --phase: -6s;
-  --drift-x: 30%;
-  --drift-y: -12%;
+  --tempo: 7s;
+  --phase: -1.8s;
+  --drift-x: 45%;
+  --drift-y: -18%;
   inset: 8% auto auto -15%;
 }
 .motion-wash-blue {
   --wash: var(--color-wash-blue);
-  --tempo: 19s;
-  --phase: -11s;
-  --drift-x: -32%;
-  --drift-y: 14%;
+  --tempo: 8.5s;
+  --phase: -3.1s;
+  --drift-x: -45%;
+  --drift-y: 21%;
   inset: -20% -15% auto auto;
 }
 .motion-wash-gold {
   --wash: var(--color-wash-gold);
-  --tempo: 22s;
-  --phase: -5s;
-  --drift-x: -26%;
-  --drift-y: 20%;
+  --tempo: 10s;
+  --phase: -3.8s;
+  --drift-x: -36%;
+  --drift-y: 27%;
   inset: -22% 20% auto auto;
 }
 .motion-track {
