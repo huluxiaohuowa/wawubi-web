@@ -3,7 +3,7 @@
  * axes: light/grotesk-sans/chromatic-green · posture: restrained · job: try and download WA Wubi · v2.0.0 */
 /* Hallmark · pre-emit critique: P4 H4 E4 S4 R4 V4 · lighter hierarchy and distinct composition and keyboard surfaces. */
 /* Hallmark · dismissed 77 · the workbench is a separate named region in the hero, with the features and install below. */
-@import url("./tokens.css?v=2");
+@import url("./tokens.css?v=3");
 @import url("./base.css?v=2");
 
 .shell {
@@ -37,7 +37,7 @@
 }
 .wordmark img { display: block; flex: none; }
 nav { display: flex; align-items: center; gap: var(--space-lg); }
-nav a, .footer-links a {
+nav a, .footer > a:last-child {
   display: inline-flex;
   align-items: center;
   min-height: 44px;
@@ -45,7 +45,7 @@ nav a, .footer-links a {
   font-size: var(--text-sm);
   white-space: nowrap;
 }
-nav a:hover, .footer-links a:hover {
+nav a:hover, .footer > a:last-child:hover {
   color: var(--color-ink);
   text-decoration: underline;
   text-underline-offset: .25em;
@@ -75,12 +75,42 @@ nav a:hover, .footer-links a:hover {
   inset: calc(-1 * var(--space-xl)) calc(-1 * var(--gutter)) 0;
   overflow: clip;
   pointer-events: none;
+  mask-image:
+    linear-gradient(90deg, transparent, var(--color-ink) 8%, var(--color-ink) 92%, transparent),
+    linear-gradient(transparent, var(--color-ink) 14%, var(--color-ink) 88%, transparent);
+  mask-composite: intersect;
 }
 .motion-wash {
   position: absolute;
-  inset: 0 -8% 0;
-  background: radial-gradient(ellipse at 65% 44%, var(--color-wash), transparent 66%);
-  animation: background-breathe 14s ease-in-out infinite alternate;
+  width: 82%;
+  height: 86%;
+  background: radial-gradient(ellipse closest-side, var(--wash), transparent);
+  animation: background-breathe var(--tempo) ease-in-out infinite alternate;
+  animation-delay: var(--phase);
+}
+.motion-wash-jade {
+  --wash: var(--color-wash-jade);
+  --tempo: 16s;
+  --phase: -6s;
+  --drift-x: 30%;
+  --drift-y: -12%;
+  inset: 8% auto auto -15%;
+}
+.motion-wash-blue {
+  --wash: var(--color-wash-blue);
+  --tempo: 19s;
+  --phase: -11s;
+  --drift-x: -32%;
+  --drift-y: 14%;
+  inset: -20% -15% auto auto;
+}
+.motion-wash-gold {
+  --wash: var(--color-wash-gold);
+  --tempo: 22s;
+  --phase: -5s;
+  --drift-x: -26%;
+  --drift-y: 20%;
+  inset: -22% 20% auto auto;
 }
 .motion-track {
   position: absolute;
@@ -119,8 +149,8 @@ nav a:hover, .footer-links a:hover {
   animation-play-state: paused;
 }
 @keyframes background-breathe {
-  from { transform: translate(-11%, -4%); }
-  to { transform: translate(12%, 6%); }
+  from { opacity: .72; transform: none; }
+  to { opacity: 1; transform: translate(var(--drift-x), var(--drift-y)); }
 }
 @keyframes stroke-pass {
   0% { opacity: 0; transform: translateX(-47%); }
@@ -365,7 +395,6 @@ nav a:hover, .footer-links a:hover {
 .install li { padding-inline-start: var(--space-xs); }
 .install li::marker { color: var(--color-focus); font-weight: 700; }
 .footer { min-height: 100px; border-top: 1px solid var(--color-rule); flex-wrap: wrap; }
-.footer-links { display: flex; align-items: center; gap: var(--space-sm); }
 
 @media (max-width: 63rem) {
   .stage { padding-inline: var(--space-lg); }
@@ -405,5 +434,4 @@ nav a:hover, .footer-links a:hover {
   .motion-ready .stage, [data-playing] .choice[data-active], .typed[data-commit] { animation: none; }
   .primary, .key { transition: none; }
   .motion-wash, .motion-track::after { animation: none; }
-  #background-motion { display: none; }
 }

@@ -50,7 +50,9 @@
   --color-action-hover: oklch(41% .085 166);
   --color-action-ink: oklch(98% .01 166);
   --color-grid: oklch(48% .06 164 / .08);
-  --color-wash: oklch(88% .055 159 / .66);
+  --color-wash-jade: oklch(83% .12 157 / .57);
+  --color-wash-blue: oklch(84% .11 231 / .58);
+  --color-wash-gold: oklch(87% .12 78 / .61);
   --color-nav: oklch(98% .008 75 / .88);
   --color-active-ink: oklch(39% .11 164);
   --color-track-jade: oklch(52% .11 162 / .34);
