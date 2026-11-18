@@ -3,13 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="oklch(97% .010 313)">
+<meta name="theme-color" content="#f8f6f3">
 <meta name="description" content="WA 五笔，为 macOS 原生开发的 86 五笔输入法。">
 <link rel="canonical" href="https://wa-wubi.fuluwa.top/">
 <link rel="icon" type="image/png" sizes="64x64" href="favicon-wa-wubi.png">
-<link rel="stylesheet" href="style.css?v=hallmark-1">
+<link rel="stylesheet" href="style.css?v=workbench-2">
 <script src="demo.js?v=017" defer></script>
 <script src="release.js?v=2" defer></script>
+<script src="background.js?v=1" defer></script>
 <title>WA 五笔 · macOS 原生 86 五笔输入法</title>
 </head>
 <body>
@@ -19,11 +20,17 @@
 </header>
 <main>
 <section class="shell hero">
+<div class="hero-motion" aria-hidden="true">
+<div class="motion-wash"></div>
+<div class="motion-track motion-track-left"></div>
+<div class="motion-track motion-track-right"></div>
+</div>
 <div class="intro">
-<h1>把五笔带到<br>你的 <span lang="en">Mac</span></h1>
+<h1>原生 86 五笔，<br>在你的 <span lang="en">Mac</span> 上。</h1>
 <div class="hero-actions">
-<p class="lead">原生 86 五笔，熟悉的键位，候选窗和词库按自己的习惯来。</p>
+<p class="lead">沿用熟悉的五笔键位。候选窗和词库，按自己的习惯设置。</p>
 <a class="primary" href="#install">下载 WA 五笔</a>
+<p class="compatibility">macOS 13+，支持 Apple 芯片与 Intel</p>
 </div>
 </div>
 <section id="try" class="stage" aria-labelledby="practice-title">
@@ -33,7 +40,7 @@
 </header>
 <div class="stage-body">
 <div class="type-area">
-<textarea id="typed" class="typed" rows="1" maxlength="500" spellcheck="false" aria-label="已上屏文字" placeholder="上屏文字可直接编辑"></textarea>
+<textarea id="typed" class="typed" rows="1" maxlength="500" spellcheck="false" aria-label="已上屏文字" placeholder="上屏文字"></textarea>
 <label class="visually-hidden" for="play">五笔编码</label>
 <input id="play" autocomplete="off" autocapitalize="off" spellcheck="false" maxlength="4" inputmode="text" placeholder="输入 1 至 4 位五笔编码">
 <div class="candidate" aria-label="候选">
@@ -88,7 +95,10 @@
 </main>
 <footer class="shell footer">
 <a href="./" class="wordmark"><img src="logo.png" width="36" height="36" alt=""> WA 五笔</a>
+<div class="footer-links">
+<button class="quiet" id="background-motion" type="button" hidden>暂停背景动效</button>
 <a href="https://github.com/huluxiaohuowa/wa-wubi/issues">反馈问题</a>
+</div>
 </footer>
 </body>
 </html>
