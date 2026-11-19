@@ -49,7 +49,7 @@
       if (newest) {
         button.href = newest.url;
         button.dataset.version = newest.version;
-        button.textContent = '下载 ' + newest.version;
+        button.textContent = '下载 Mac 版';
       }
     } catch {
       // The page already has a verified installer link.
