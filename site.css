@@ -107,3 +107,8 @@ pre { max-width: 100%; overflow: auto; padding: var(--space-lg); border-radius: 
 .doc-toc nav, .doc-toc-inline nav { display: block; }
 .appearance-story { padding-top: 0; }
 .policy h1 { font-size: clamp(2rem, 4vw, 3.5rem); font-weight: 500; }
+
+.doc-operation { padding: var(--space-sm); background: var(--color-paper-2); border: 1px solid var(--color-rule); border-radius: var(--radius-control); }
+.doc-operation > a { display: block; }
+.doc-operation img { max-height: none; }
+.doc-operation figcaption { padding: var(--space-sm) var(--space-xs) var(--space-xs); line-height: 1.65; }

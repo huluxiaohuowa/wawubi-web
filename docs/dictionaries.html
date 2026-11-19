@@ -11,7 +11,7 @@
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=20261119">
 <link rel="stylesheet" href="/style.css?v=site-9">
 <link rel="stylesheet" href="/stories.css?v=2">
-<link rel="stylesheet" href="/site.css?v=1">
+<link rel="stylesheet" href="/site.css?v=2">
 <title>导入与在线词库 · WA 五笔</title>
 <script src="/docs.js?v=1" defer></script>
 </head>
@@ -43,12 +43,14 @@
 </h2>
 <a href="/docs/keys.html" data-doc-title="按键速查 候选选择、模式切换、词库编辑和设置入口的快捷键。">按键速查</a>
 <a href="/docs/input.html" data-doc-title="中英文与辅助输入 临时拼音、输入方案、日期金额、繁体和标点设置。">中英文与辅助输入</a>
+<a href="/docs/cloud.html" data-doc-title="云联想、问字与翻译 连接服务商，按需补全、问字和翻译。">云联想、问字与翻译</a>
 </section>
 <section class="docs-nav-group">
 <h2>个性化
 </h2>
 <a href="/docs/appearance.html" data-doc-title="外观与候选顺序 调整主题、字号、候选数量、横竖布局和候选顺序。">外观与候选顺序</a>
-<a href="/docs/dictionaries.html" data-doc-title="导入与在线词库 选择专业词库、导入自己的词表，并理解编码与重复项的处理。" aria-current="page">导入与在线词库</a>
+<a href="/docs/language-learning.html" data-doc-title="语言学习 开启候选译词，了解离线释义与云端补充。">语言学习</a>
+<a aria-current="page" href="/docs/dictionaries.html" data-doc-title="导入与在线词库 选择专业词库、导入自己的词表，并理解编码与重复项的处理。">导入与在线词库</a>
 <a href="/docs/learning.html" data-doc-title="用户词库与自动加词 手动加词，或在拆字输入后把新词记进用户词库。">用户词库与自动加词</a>
 <a href="/docs/sync.html" data-doc-title="iCloud 同步 在同一 Apple 账户的设备之间共享词库与输入偏好。">iCloud 同步</a>
 <a href="/docs/speech.html" data-doc-title="语音输入 设置识别服务、录音快捷键及必要权限。">语音输入</a>
@@ -81,7 +83,7 @@
 <details class="doc-toc-inline">
 <summary>本页内容
 </summary>
-<nav aria-label="本页目录"><a href="#section-1">在线安装</a><a href="#section-2">支持的本地格式</a><a href="#section-3">文本词表怎么写</a><a href="#section-4">在 iPhone 或 iPad 上管理</a>
+<nav aria-label="本页目录"><a href="#section-1">在线安装</a><a href="#section-2">导入本地词库</a><a href="#section-3">文本词表怎么写</a><a href="#section-4">在 iPhone 或 iPad 上管理</a>
 </nav>
 </details>
 <section id="section-1">
@@ -98,9 +100,12 @@
 <p>词库来源和许可见 <a href="https://github.com/huluxiaohuowa/wawubi-web/tree/main/dictionaries">公开词库目录</a>。
 </p>
 </section>
+<figure class="doc-operation"><a href="/images/docs/lexicon-overview.webp" aria-label="查看大图：词库设置中的导入词库按钮及已安装的示例词库"><img src="/images/docs/lexicon-overview.webp" alt="词库设置中的导入词库按钮及已安装的示例词库" width="1468" height="1142" loading="lazy" decoding="async"></a><figcaption>打开「设置 → 词库」：顶部导入文件，下方管理已安装词库和在线词库 · 点击图片查看大图</figcaption></figure>
 <section id="section-2">
-<h2>支持的本地格式
+<h2>导入本地词库
 </h2>
+<ol><li>点击「导入词库…」，选择准备好的文件。</li><li>点击「导入」，等待处理完成。</li><li>查看导入与跳过数量，再确认词库出现在「已安装」中。示例文件包含「五笔」与「输入法」两条词。</li></ol>
+<figure class="doc-operation"><a href="/images/docs/lexicon-file.webp" aria-label="查看大图：选中五笔常用词 TSV 文件，右下角是导入按钮"><img src="/images/docs/lexicon-file.webp" alt="选中五笔常用词 TSV 文件，右下角是导入按钮" width="1366" height="998" loading="lazy" decoding="async"></a><figcaption>步骤 1–2：选择文件后点击「导入」 · 点击图片查看大图</figcaption></figure>
 <div class="table-scroll">
 <table>
 <thead>
@@ -148,6 +153,7 @@
 <pre><code>五笔	ggtt	100
 输入法	ltif	100</code>
 </pre>
+<p>可先下载 <a href="/examples/wubi-words.tsv" download>示例 TSV 词表</a> 试一次导入。</p>
 <p>下载和导入均按 86 规则生成编码。重复词条优先使用用户指定或已有的编码，缺码词会计入跳过数。导入后请检查结果提示。
 </p>
 </section>
@@ -157,13 +163,12 @@
 <p>打开 WA 五笔主 App，在设置中进入「管理词库」，可在线下载搜狗、Rime、清华词库，也可导入本地文件。允许完全访问后，键盘扩展的词库编辑和学习可以写入主 App 的共享词库。
 </p>
 </section>
-<nav class="doc-pagination" aria-label="前后文档"><a href="/docs/appearance.html"><span>上一篇</span>外观与候选顺序</a><a href="/docs/learning.html"><span>下一篇</span>用户词库与自动加词</a>
-</nav>
+<nav class="doc-pagination" aria-label="前后文档"><a href="/docs/language-learning.html"><span>上一篇</span>语言学习</a><a href="/docs/learning.html"><span>下一篇</span>用户词库与自动加词</a></nav>
 </article>
 <aside class="doc-toc">
 <nav aria-label="本页目录">
 <h2>本页内容
-</h2><a href="#section-1">在线安装</a><a href="#section-2">支持的本地格式</a><a href="#section-3">文本词表怎么写</a><a href="#section-4">在 iPhone 或 iPad 上管理</a>
+</h2><a href="#section-1">在线安装</a><a href="#section-2">导入本地词库</a><a href="#section-3">文本词表怎么写</a><a href="#section-4">在 iPhone 或 iPad 上管理</a>
 </nav>
 </aside>
 </main>

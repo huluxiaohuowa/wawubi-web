@@ -11,7 +11,7 @@
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=20261119">
 <link rel="stylesheet" href="/style.css?v=site-9">
 <link rel="stylesheet" href="/stories.css?v=2">
-<link rel="stylesheet" href="/site.css?v=1">
+<link rel="stylesheet" href="/site.css?v=2">
 <title>用户词库与自动加词 · WA 五笔</title>
 <script src="/docs.js?v=1" defer></script>
 </head>
@@ -43,13 +43,15 @@
 </h2>
 <a href="/docs/keys.html" data-doc-title="按键速查 候选选择、模式切换、词库编辑和设置入口的快捷键。">按键速查</a>
 <a href="/docs/input.html" data-doc-title="中英文与辅助输入 临时拼音、输入方案、日期金额、繁体和标点设置。">中英文与辅助输入</a>
+<a href="/docs/cloud.html" data-doc-title="云联想、问字与翻译 连接服务商，按需补全、问字和翻译。">云联想、问字与翻译</a>
 </section>
 <section class="docs-nav-group">
 <h2>个性化
 </h2>
 <a href="/docs/appearance.html" data-doc-title="外观与候选顺序 调整主题、字号、候选数量、横竖布局和候选顺序。">外观与候选顺序</a>
+<a href="/docs/language-learning.html" data-doc-title="语言学习 开启候选译词，了解离线释义与云端补充。">语言学习</a>
 <a href="/docs/dictionaries.html" data-doc-title="导入与在线词库 选择专业词库、导入自己的词表，并理解编码与重复项的处理。">导入与在线词库</a>
-<a href="/docs/learning.html" data-doc-title="用户词库与自动加词 手动加词，或在拆字输入后把新词记进用户词库。" aria-current="page">用户词库与自动加词</a>
+<a aria-current="page" href="/docs/learning.html" data-doc-title="用户词库与自动加词 手动加词，或在拆字输入后把新词记进用户词库。">用户词库与自动加词</a>
 <a href="/docs/sync.html" data-doc-title="iCloud 同步 在同一 Apple 账户的设备之间共享词库与输入偏好。">iCloud 同步</a>
 <a href="/docs/speech.html" data-doc-title="语音输入 设置识别服务、录音快捷键及必要权限。">语音输入</a>
 </section>
@@ -92,10 +94,11 @@
 <p>Control + = 可快捷加词。使用之前请确认要保存的是当前候选或选中的文字。
 </p>
 </section>
+<figure class="doc-operation"><a href="/images/docs/personal-editor.webp" aria-label="查看大图：编辑用户词库，示例五笔已自动填写编码 ggtt"><img src="/images/docs/personal-editor.webp" alt="编辑用户词库，示例五笔已自动填写编码 ggtt" width="1060" height="836" loading="lazy" decoding="async"></a><figcaption>步骤 1：输入「五笔」，检查自动生成的 ggtt；需要时修改编码，再点击「保存」 · 点击图片查看大图</figcaption></figure>
 <section id="section-2">
 <h2>从拆字输入自动加词
 </h2>
-<p>从 macOS 0.1.32 起，两种自动加词方式都在「设置 → 词库 → 自动加词」，可分别开启。</p>
+<p>两种自动加词方式都在「设置 → 词库 → 自动加词」，可分别开启。</p>
 <ol>
 <li>开启「删码重打时自动加词」。
 </li>
@@ -106,6 +109,8 @@
 </ol>
 <p>开启「连续上屏时自动组词」后，连续上屏的完整五笔字词会按全码组词并加入用户词库。最大词长默认 4 字，可调至 2–10 字。</p>
 </section>
+<figure class="doc-operation"><a href="/images/docs/auto-phrases.webp" aria-label="查看大图：词库自动加词设置，连续上屏自动组词已开启，最大词长四字"><img src="/images/docs/auto-phrases.webp" alt="词库自动加词设置，连续上屏自动组词已开启，最大词长四字" width="1468" height="1142" loading="lazy" decoding="async"></a><figcaption>步骤 2：在「词库 → 自动加词」选择需要的方式。连续组词与删码重打可分别开启 · 点击图片查看大图</figcaption></figure>
+<p>如果开关不可用，检查下方「86 五笔词库方案」是否选择了「仅单字」。需要词组时切回「字与词组」。</p>
 <section id="section-3">
 <h2>用微信练习
 </h2>
@@ -120,8 +125,7 @@
 <p>用户词库可以参与 <a href="sync.html">iCloud 同步</a>。在 iOS 系统键盘中保存学习结果，还需要允许完全访问。
 </p>
 </section>
-<nav class="doc-pagination" aria-label="前后文档"><a href="/docs/dictionaries.html"><span>上一篇</span>导入与在线词库</a><a href="/docs/sync.html"><span>下一篇</span>iCloud 同步</a>
-</nav>
+<nav class="doc-pagination" aria-label="前后文档"><a href="/docs/dictionaries.html"><span>上一篇</span>导入与在线词库</a><a href="/docs/sync.html"><span>下一篇</span>iCloud 同步</a></nav>
 </article>
 <aside class="doc-toc">
 <nav aria-label="本页目录">

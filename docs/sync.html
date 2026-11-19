@@ -11,7 +11,7 @@
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=20261119">
 <link rel="stylesheet" href="/style.css?v=site-9">
 <link rel="stylesheet" href="/stories.css?v=2">
-<link rel="stylesheet" href="/site.css?v=1">
+<link rel="stylesheet" href="/site.css?v=2">
 <title>iCloud 同步 · WA 五笔</title>
 <script src="/docs.js?v=1" defer></script>
 </head>
@@ -43,14 +43,16 @@
 </h2>
 <a href="/docs/keys.html" data-doc-title="按键速查 候选选择、模式切换、词库编辑和设置入口的快捷键。">按键速查</a>
 <a href="/docs/input.html" data-doc-title="中英文与辅助输入 临时拼音、输入方案、日期金额、繁体和标点设置。">中英文与辅助输入</a>
+<a href="/docs/cloud.html" data-doc-title="云联想、问字与翻译 连接服务商，按需补全、问字和翻译。">云联想、问字与翻译</a>
 </section>
 <section class="docs-nav-group">
 <h2>个性化
 </h2>
 <a href="/docs/appearance.html" data-doc-title="外观与候选顺序 调整主题、字号、候选数量、横竖布局和候选顺序。">外观与候选顺序</a>
+<a href="/docs/language-learning.html" data-doc-title="语言学习 开启候选译词，了解离线释义与云端补充。">语言学习</a>
 <a href="/docs/dictionaries.html" data-doc-title="导入与在线词库 选择专业词库、导入自己的词表，并理解编码与重复项的处理。">导入与在线词库</a>
 <a href="/docs/learning.html" data-doc-title="用户词库与自动加词 手动加词，或在拆字输入后把新词记进用户词库。">用户词库与自动加词</a>
-<a href="/docs/sync.html" data-doc-title="iCloud 同步 在同一 Apple 账户的设备之间共享词库与输入偏好。" aria-current="page">iCloud 同步</a>
+<a aria-current="page" href="/docs/sync.html" data-doc-title="iCloud 同步 在同一 Apple 账户的设备之间共享词库与输入偏好。">iCloud 同步</a>
 <a href="/docs/speech.html" data-doc-title="语音输入 设置识别服务、录音快捷键及必要权限。">语音输入</a>
 </section>
 <section class="docs-nav-group">
@@ -90,9 +92,12 @@
 <p>确认设备使用同一 Apple 账户，iCloud Drive 可用。Mac 从「设置 → 同步」启用 iCloud 同步，iPhone 和 iPad 从 WA 五笔主 App 的设置开启「同步设置和词库」。各设备自动访问 WA 五笔容器。
 </p>
 </section>
+<figure class="doc-operation"><a href="/images/docs/sync-settings.webp" aria-label="查看大图：同步设置中的启用 iCloud 同步开关"><img src="/images/docs/sync-settings.webp" alt="同步设置中的启用 iCloud 同步开关" width="1468" height="1142" loading="lazy" decoding="async"></a><figcaption>步骤 1：在「设置 → 同步」点击「启用 iCloud 同步」 · 点击图片查看大图</figcaption></figure>
 <section id="section-2">
 <h2>选择首次合并方式
 </h2>
+<p>弹出首次合并窗口后，先读清选项。两台设备都有想保留的词库时，可选「合并 · 较新修改优先」；确认后点击「开启同步」。</p>
+<figure class="doc-operation"><a href="/images/docs/sync-merge.webp" aria-label="查看大图：首次同步窗口中的四种合并方式及开启同步按钮"><img src="/images/docs/sync-merge.webp" alt="首次同步窗口中的四种合并方式及开启同步按钮" width="920" height="576" loading="lazy" decoding="async"></a><figcaption>步骤 2：选择首次合并方式，然后点击「开启同步」 · 点击图片查看大图</figcaption></figure>
 <div class="table-scroll">
 <table>
 <thead>
@@ -123,7 +128,7 @@
 </td>
 </tr>
 <tr>
-<th scope="row">直接使用 iCloud 数据
+<th scope="row">直接切换到 iCloud
 </th>
 <td>用云端词库和设置替换本机当前内容
 </td>
@@ -151,13 +156,12 @@
 <section id="section-4">
 <h2>查看与排查
 </h2>
-<p>可以在设置中点击「立即同步」，查看状态提示。iCloud 容器中的 <code>Wa-Wubi</code> 目录保存设置与词库，个人词库和每个导入词库分别存储。首次同步会处理原同步目录的数据。
+<p>步骤 3：开启后，回到同步页点击「立即同步」，查看状态提示。另一台设备也需开启同步，再确认词库或偏好已更新。iCloud 容器中的 <code>Wa-Wubi</code> 目录保存设置与词库，个人词库和每个导入词库分别存储。首次同步会处理原同步目录的数据。
 </p>
 <p>长时间未更新时，先检查 Apple 账户、iCloud Drive 和网络，再在两台设备分别触发同步。请先保留本机词库，避免反复覆盖。
 </p>
 </section>
-<nav class="doc-pagination" aria-label="前后文档"><a href="/docs/learning.html"><span>上一篇</span>用户词库与自动加词</a><a href="/docs/speech.html"><span>下一篇</span>语音输入</a>
-</nav>
+<nav class="doc-pagination" aria-label="前后文档"><a href="/docs/learning.html"><span>上一篇</span>用户词库与自动加词</a><a href="/docs/speech.html"><span>下一篇</span>语音输入</a></nav>
 </article>
 <aside class="doc-toc">
 <nav aria-label="本页目录">
