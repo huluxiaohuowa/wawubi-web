@@ -9,18 +9,18 @@
 <link rel="icon" href="/favicon.ico?v=20261119" sizes="any">
 <link rel="icon" type="image/png" sizes="64x64" href="/favicon-wa-wubi.png?v=20261119">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=20261119">
-<link rel="stylesheet" href="style.css?v=workbench-7">
+<link rel="stylesheet" href="style.css?v=site-9">
+<link rel="stylesheet" href="stories.css?v=2">
+<link rel="stylesheet" href="/site.css?v=1">
 <script src="demo.js?v=017" defer></script>
 <script src="release.js?v=2" defer></script>
 <script src="background.js?v=2" defer></script>
 <title>WA 五笔 · macOS 原生 86 五笔输入法</title>
 </head>
 <body>
-<header class="shell masthead">
-<a href="./" class="wordmark"><img src="logo.png" width="36" height="36" alt=""> WA 五笔</a>
-<nav aria-label="主导航"><a href="#try">在线试打</a><a href="#features">功能</a><a href="https://github.com/huluxiaohuowa/wa-wubi">GitHub</a></nav>
-</header>
-<main>
+<a class="skip-link" href="#main-content">跳到正文</a>
+<header class="shell masthead"><a href="/" class="wordmark"><img src="/logo.png" width="36" height="36" alt=""> WA 五笔</a><nav aria-label="主导航"><a href="/" aria-current="page">首页</a><a href="/docs/">文档</a><a href="/themes.html">主题</a><a href="/download.html">下载</a><a href="/about.html">关于</a></nav></header>
+<main id="main-content">
 <section class="shell hero">
 <div class="hero-motion" aria-hidden="true">
 <div class="motion-wash motion-wash-jade"></div>
@@ -33,7 +33,7 @@
 <h1>原生 86 五笔，<br>在你的 <span lang="en">Mac</span> 上。</h1>
 <div class="hero-actions">
 <p class="lead">沿用熟悉的五笔键位。候选窗和词库，按自己的习惯设置。</p>
-<a class="primary" href="#install">下载 WA 五笔</a>
+<a class="primary" href="/download.html">下载 WA 五笔</a>
 <p class="compatibility">macOS 13+，支持 Apple 芯片与 Intel</p>
 </div>
 </div>
@@ -58,9 +58,42 @@
 </section>
 </section>
 
+<section class="features" id="features">
+<div class="shell feature-layout">
+<h2>按你的习惯，设置五笔</h2>
+<div class="feature-list">
+<article>
+<h3>从第一键开始选字</h3>
+<p>一到四键均可查码。单键时按分号可选键名汉字。默认排第二，和一级简码相同时合为首选。同键四连输入全码时，键名汉字排第一。</p>
+<a class="feature-guide" href="/docs/first-input.html">查看操作说明</a></article>
+<article>
+<h3>候选窗和中英切换</h3>
+<p>调整候选数量、透明度、字号与横竖布局。轻按 Shift 切换中英，也能为常用应用设定默认语言。</p>
+<a class="feature-guide" href="/docs/appearance.html">查看操作说明</a></article>
+<article>
+<h3>拖动调整候选词顺序</h3>
+<p>用鼠标拖动候选词，把常用词排到前面。</p>
+<a class="feature-guide" href="/docs/appearance.html">查看操作说明</a></article>
+<article>
+<h3>带上自己的词库</h3>
+<p>导入搜狗细胞词库、Rime 码表或文本词表。支持在线词库、手动加词，以及通过 iCloud Drive 同步词库和设置。</p>
+<a class="feature-guide" href="/docs/dictionaries.html">查看操作说明</a></article>
+<article>
+<h3>拆字打一次，下次整词输入</h3>
+<p>在词库设置开启自动加词。打不出「微信」时，删掉 <kbd>tmwy</kbd>，分开选「微」和「信」，WA 五笔就会在编码吻合时把这个词加入用户词库。</p>
+<a class="feature-guide" href="/docs/learning.html">查看操作说明</a></article>
+<article>
+<h3>按住说话，松手上屏</h3>
+<p>启用语音后，按住自选快捷键录音。可选择 Apple Speech 或兼容的云转写服务。</p>
+<a class="feature-guide" href="/docs/speech.html">查看操作说明</a></article>
+</div>
+</div>
+</section>
+
+<section class="shell story" id="explore"><div class="story-heading"><h2>按你需要的方式，<br>继续了解。</h2><p>外观可以先试，设置可以逐项查。安装与日常操作都有独立说明。</p></div><div class="guide-links"><a href="/themes.html"><strong>候选窗主题</strong><span>试用纸白、松墨、横竖排和字号。</span></a><a href="/docs/dictionaries.html"><strong>词库与自动加词</strong><span>从导入已有词表，到记住新词。</span></a><a href="/docs/sync.html"><strong>iCloud 同步</strong><span>了解哪些内容同步，如何首次合并。</span></a><a href="/docs/mobile.html"><strong>iOS 键盘与手势</strong><span>滑动换键、光标移动和大屏布局。</span></a></div></section>
 <section class="shell mobile-preview" id="mobile" aria-labelledby="mobile-title">
 <h2 id="mobile-title">WA 五笔在 iPhone Duo 上</h2>
-<p>iOS 版预览。展开内屏时可用双手分区键盘，双指捏合后可拖动小键盘。</p>
+<p>展开内屏时可用双手分区键盘，双指捏合后可拖动小键盘。下载与设备要求以 App Store 页面为准。</p>
 <div class="mobile-preview-gallery">
 <figure>
 <a href="images/duo-split.webp"><img src="images/duo-split.webp" width="1426" height="1003" loading="lazy" decoding="async" alt="iPhone Duo 在文件 App 中用 WA 五笔分区键盘输入，候选栏显示五笔"></a>
@@ -73,34 +106,16 @@
 </div>
 </section>
 
-<section class="features" id="features">
-<div class="shell feature-layout">
-<h2>按你的习惯，设置五笔</h2>
-<div class="feature-list">
-<article>
-<h3>从第一键开始选字</h3>
-<p>一到四键均可查码。单键时按分号可选键名汉字。默认排第二，和一级简码相同时合为首选。同键四连输入全码时，键名汉字排第一。</p>
-</article>
-<article>
-<h3>候选窗和中英切换</h3>
-<p>调整候选数量、透明度、字号与横竖布局。轻按 Shift 切换中英，也能为常用应用设定默认语言。</p>
-</article>
-<article>
-<h3>拖动调整候选词顺序</h3>
-<p>用鼠标拖动候选词，把常用词排到前面。</p>
-</article>
-<article>
-<h3>带上自己的词库</h3>
-<p>导入搜狗细胞词库、Rime 码表或文本词表。支持在线词库、手动加词，以及通过 iCloud Drive 同步词库和设置。</p>
-</article>
-<article>
-<h3>拆字打一次，下次整词输入</h3>
-<p>在词库设置开启自动加词。打不出「微信」时，删掉 <kbd>tmwy</kbd>，分开选「微」和「信」，WA 五笔就会在编码吻合时把这个词加入用户词库。</p>
-</article>
-<article>
-<h3>按住说话，松手上屏</h3>
-<p>启用语音后，按住自选快捷键录音。可选择 Apple Speech 或兼容的云转写服务。</p>
-</article>
+<section class="faq-story" id="faq" aria-labelledby="faq-title">
+<div class="shell faq-layout">
+<div><h2 id="faq-title">开始之前，<br>你可能想了解。</h2><a class="story-link" href="/docs/">阅读使用文档</a></div>
+<div class="faq-list">
+<details><summary>这是 86 五笔还是 98 五笔？</summary><p>WA 五笔使用 86 五笔码表。在线试打也使用 86 五笔编码，可以先在页面上体验键位和候选。</p></details>
+<details><summary>Mac 版和 iOS 版从哪里下载？</summary><p>Mac 版从本页下载安装包，支持 macOS 13 及以上的 Apple 芯片与 Intel Mac。iOS 版通过 App Store 下载，设备和系统要求以商店页面为准。</p></details>
+<details><summary>安装后，为什么输入源列表里还没有？</summary><p>打开「系统设置 → 键盘 → 文本输入 → 编辑」，在简体中文中添加 WA 五笔。首次安装后若列表没有刷新，请保存工作并重新登录，再添加输入源。</p></details>
+<details><summary>使用语音一定要配置云服务吗？</summary><p>不需要。Mac 版可使用 Apple Speech，在系统支持时优先设备端识别。选择云转写服务时，才需要配置对应服务。</p></details>
+<details><summary>词库和设置可以带到另一台 Mac 吗？</summary><p>可以。同一 Apple 账户的 Mac 可开启 iCloud 同步，词库与多项设置会合并。密钥和系统授权仍由各设备单独管理。</p></details>
+<details><summary>以后如何更新 Mac 版？</summary><p>从输入法菜单手动检查更新，或在设置中开启自动下载并安装。下载校验通过后安装，macOS 可能请求管理员授权。</p></details>
 </div>
 </div>
 </section>
@@ -123,10 +138,6 @@
 </div>
 </section>
 </main>
-<footer class="shell footer">
-<a href="./" class="wordmark"><img src="logo.png" width="36" height="36" alt=""> WA 五笔</a>
-<a href="privacy.html">隐私政策</a>
-<a href="https://github.com/huluxiaohuowa/wa-wubi/issues">反馈问题</a>
-</footer>
+<footer class="shell footer"><a href="/" class="wordmark"><img src="/logo.png" width="36" height="36" alt=""> WA 五笔</a><div class="site-footer-links"><a href="/docs/">使用文档</a><a href="/privacy.html">隐私政策</a><a href="https://github.com/huluxiaohuowa/wa-wubi/issues">反馈问题</a><a href="https://github.com/huluxiaohuowa/wa-wubi">GitHub</a></div></footer>
 </body>
 </html>

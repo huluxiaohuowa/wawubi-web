@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f8f6f3">
+<meta name="description" content="试用候选窗配色、横竖布局与字号，下载 Mac 版外观预设。">
+<link rel="canonical" href="https://wa-wubi.fuluwa.top/themes.html">
+<link rel="icon" href="/favicon.ico?v=20261119" sizes="any">
+<link rel="icon" type="image/png" sizes="64x64" href="/favicon-wa-wubi.png?v=20261119">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=20261119">
+<link rel="stylesheet" href="/style.css?v=site-9">
+<link rel="stylesheet" href="/stories.css?v=2">
+<link rel="stylesheet" href="/site.css?v=1">
+<title>候选窗主题 · WA 五笔</title>
+<script src="/stories.js?v=1" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">跳到正文</a>
+<header class="shell masthead"><a href="/" class="wordmark"><img src="/logo.png" width="36" height="36" alt=""> WA 五笔</a>
+<nav aria-label="主导航"><a href="/">首页</a><a href="/docs/">文档</a>
+<a href="/themes.html" aria-current="page">主题</a><a href="/download.html">下载</a><a href="/about.html">关于</a>
+</nav>
+</header>
+<main id="main-content">
+<header class="shell page-heading">
+<h1>候选窗主题
+</h1>
+<p>纸白或松墨，横排或竖排。先在这里比较配色、布局与字号，再把喜欢的外观带到 Mac 版。
+</p>
+</header>
+<section class="shell story appearance-story" id="appearance" aria-label="候选窗交互预览">
+<div class="appearance-layout">
+<figure class="candidate-demo" id="candidate-demo" data-theme="paper" data-layout="horizontal">
+<div class="candidate-demo-sentence">细微之处，也顺手。
+</div>
+<div class="candidate-demo-strip" aria-label="候选窗样式预览">
+<code>tmgt</code>
+<div class="candidate-demo-words">
+<span><small>1</small> 微</span><span><small>2</small> 徵</span><span><small>3</small> 徽</span><span><small>4</small> 徴</span>
+</div>
+</div>
+<figcaption>候选窗交互预览。此处只演示外观，实际设置在 Mac 版中完成。
+</figcaption>
+</figure>
+<div class="appearance-controls">
+<fieldset><legend>配色</legend>
+<div class="option-group"><button type="button" data-demo-theme="paper" aria-pressed="true">纸白</button><button type="button" data-demo-theme="ink" aria-pressed="false">松墨</button>
+</div>
+</fieldset>
+<fieldset><legend>候选布局</legend>
+<div class="option-group"><button type="button" data-demo-layout="horizontal" aria-pressed="true">横排</button><button type="button" data-demo-layout="vertical" aria-pressed="false">竖排</button>
+</div>
+</fieldset>
+<label class="size-control" for="candidate-size">候选字号 <output id="candidate-size-label" for="candidate-size">22 pt</output>
+<input type="range" id="candidate-size" min="14" max="28" value="22" step="1"></label>
+<p>喜欢的外观可以导出为文件，换一台 Mac 后再导入。
+</p>
+</div>
+</div>
+</section>
+<section class="shell article-section" id="theme-files">
+<h2>主题文件
+</h2>
+<p>下载预设后，在 Mac 版「设置 → 外观 → 导入外观…」选择 JSON 文件。这些预设只包含配色、透明度、字号和布局。
+</p>
+<div class="preset-list">
+<article>
+<h3>纸白横排
+</h3>
+<p>纸白主题，22 pt，100% 不透明度，横向候选。
+</p><a class="story-link" href="/themes/paper.json" download>下载纸白预设</a>
+</article>
+<article>
+<h3>松墨竖排
+</h3>
+<p>松墨主题，22 pt，100% 不透明度，纵向候选。
+</p><a class="story-link" href="/themes/ink.json" download>下载松墨预设</a>
+</article>
+</div>
+<h2>保存自己的外观
+</h2>
+<ol>
+<li>在 Mac 版设置中选主题，调整 14–28 pt 字号、40%–100% 不透明度和横竖布局。
+</li>
+<li>点击「导出外观…」，保存文件。
+</li>
+<li>在另一台 Mac 中导入。候选数量等其他输入设置仍在对应设置页调整。
+</li>
+</ol>
+<details class="shortcut-disclosure">
+<summary>查看外观文件格式
+</summary>
+<pre><code>{
+  "theme": "paper",
+  "opacity": 1,
+  "fontSize": 22,
+  "vertical": false
+}</code>
+</pre>
+<p>theme 可用 system、ink、paper 或 indigo。请使用应用导出的结构，避免添加无效字段。
+</p>
+</details><a class="story-link" href="/docs/appearance.html">阅读外观与候选顺序文档</a>
+</section>
+</main>
+<footer class="shell footer"><a href="/" class="wordmark"><img src="/logo.png" width="36" height="36" alt=""> WA 五笔</a>
+<div class="site-footer-links"><a href="/docs/">使用文档</a><a href="/privacy.html">隐私政策</a><a href="https://github.com/huluxiaohuowa/wa-wubi/issues">反馈问题</a><a href="https://github.com/huluxiaohuowa/wa-wubi">GitHub</a>
+</div>
+</footer>
+</body>
+</html>

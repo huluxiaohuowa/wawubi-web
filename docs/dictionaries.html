@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f8f6f3">
+<meta name="description" content="选择专业词库、导入自己的词表，并理解编码与重复项的处理。">
+<link rel="canonical" href="https://wa-wubi.fuluwa.top/docs/dictionaries.html">
+<link rel="icon" href="/favicon.ico?v=20261119" sizes="any">
+<link rel="icon" type="image/png" sizes="64x64" href="/favicon-wa-wubi.png?v=20261119">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=20261119">
+<link rel="stylesheet" href="/style.css?v=site-9">
+<link rel="stylesheet" href="/stories.css?v=2">
+<link rel="stylesheet" href="/site.css?v=1">
+<title>导入与在线词库 · WA 五笔</title>
+<script src="/docs.js?v=1" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">跳到正文</a>
+<header class="shell masthead"><a href="/" class="wordmark"><img src="/logo.png" width="36" height="36" alt=""> WA 五笔</a>
+<nav aria-label="主导航"><a href="/">首页</a>
+<a href="/docs/" aria-current="page">文档</a><a href="/themes.html">主题</a><a href="/download.html">下载</a><a href="/about.html">关于</a>
+</nav>
+</header>
+<main class="shell docs-layout" id="main-content">
+<aside class="docs-sidebar">
+<details class="docs-nav" open>
+<summary>文档目录
+</summary>
+<nav aria-label="文档章节"><label class="doc-search-label" for="doc-search">查找文档标题</label><input type="search" id="doc-search" placeholder="例如：词库、同步、iOS">
+<p id="doc-search-status" role="status" hidden>
+</p>
+<section class="docs-nav-group">
+<h2>开始使用
+</h2>
+<a href="/docs/" data-doc-title="从第一次输入开始 按任务找到安装、输入、词库、同步与语音说明。">从第一次输入开始</a>
+<a href="/docs/install-mac.html" data-doc-title="安装 Mac 版 从 DMG 安装输入法，为当前账号添加输入源。">安装 Mac 版</a>
+<a href="/docs/install-ios.html" data-doc-title="添加 iOS 键盘 安装主 App，添加系统键盘，并了解完全访问的作用。">添加 iOS 键盘</a>
+<a href="/docs/first-input.html" data-doc-title="第一次输入 从一个词开始，熟悉编码、候选、上屏和中英切换。">第一次输入</a>
+</section>
+<section class="docs-nav-group">
+<h2>输入
+</h2>
+<a href="/docs/keys.html" data-doc-title="按键速查 候选选择、模式切换、词库编辑和设置入口的快捷键。">按键速查</a>
+<a href="/docs/input.html" data-doc-title="中英文与辅助输入 临时拼音、输入方案、日期金额、繁体和标点设置。">中英文与辅助输入</a>
+</section>
+<section class="docs-nav-group">
+<h2>个性化
+</h2>
+<a href="/docs/appearance.html" data-doc-title="外观与候选顺序 调整主题、字号、候选数量、横竖布局和候选顺序。">外观与候选顺序</a>
+<a href="/docs/dictionaries.html" data-doc-title="导入与在线词库 选择专业词库、导入自己的词表，并理解编码与重复项的处理。" aria-current="page">导入与在线词库</a>
+<a href="/docs/learning.html" data-doc-title="用户词库与自动加词 手动加词，或在拆字输入后把新词记进用户词库。">用户词库与自动加词</a>
+<a href="/docs/sync.html" data-doc-title="iCloud 同步 在同一 Apple 账户的设备之间共享词库与输入偏好。">iCloud 同步</a>
+<a href="/docs/speech.html" data-doc-title="语音输入 设置识别服务、录音快捷键及必要权限。">语音输入</a>
+</section>
+<section class="docs-nav-group">
+<h2>各平台
+</h2>
+<a href="/docs/mobile.html" data-doc-title="iOS 键盘与手势 按键滑动、光标移动、大屏分区和浮动键盘。">iOS 键盘与手势</a>
+<a href="/docs/platforms.html" data-doc-title="平台与功能位置 按你使用的设备找到对应入口。">平台与功能位置</a>
+</section>
+<section class="docs-nav-group">
+<h2>帮助
+</h2>
+<a href="/docs/faq.html" data-doc-title="常见问题 找不到输入源、候选行为与同步权限的排查入口。">常见问题</a>
+<a href="/docs/updates.html" data-doc-title="更新与版本 获取新版、检查更新与安装后的验证。">更新与版本</a>
+<a href="/docs/data.html" data-doc-title="隐私与数据边界 理解词库、同步、下载和语音分别在什么时候使用网络。">隐私与数据边界</a>
+</section>
+</nav>
+</details>
+</aside>
+<article class="doc-article">
+<header>
+<h1>导入与在线词库
+</h1>
+<p class="doc-lead">选择专业词库、导入自己的词表，并理解编码与重复项的处理。
+</p>
+<p class="doc-scope">适用 Mac 版，iOS 版可从主 App 管理词库
+</p>
+</header>
+<details class="doc-toc-inline">
+<summary>本页内容
+</summary>
+<nav aria-label="本页目录"><a href="#section-1">在线安装</a><a href="#section-2">支持的本地格式</a><a href="#section-3">文本词表怎么写</a><a href="#section-4">在 iPhone 或 iPad 上管理</a>
+</nav>
+</details>
+<section id="section-1">
+<h2>在线安装
+</h2>
+<ol>
+<li>打开「设置 → 词库 → 在线词库」。
+</li>
+<li>在搜狗、Rime、清华中浏览或搜索词库。搜狗结果提供来源页面。
+</li>
+<li>点击安装。已安装的词库可以检查更新，按需要补充专业词汇。
+</li>
+</ol>
+<p>词库来源和许可见 <a href="https://github.com/huluxiaohuowa/wawubi-web/tree/main/dictionaries">公开词库目录</a>。
+</p>
+</section>
+<section id="section-2">
+<h2>支持的本地格式
+</h2>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th scope="col">文件
+</th>
+<th scope="col">内容
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th scope="row">.scel
+</th>
+<td>搜狗细胞词库
+</td>
+</tr>
+<tr>
+<th scope="row">.dict.yaml
+</th>
+<td>Rime 码表
+</td>
+</tr>
+<tr>
+<th scope="row">TXT / TSV / CSV
+</th>
+<td>词语与编码，可附权重
+</td>
+</tr>
+<tr>
+<th scope="row">搜狗自定义短语
+</th>
+<td>编码,序号=词语
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="section-3">
+<h2>文本词表怎么写
+</h2>
+<p>支持「词语 编码」或「编码 词语」，可带权重。下面使用 Tab 分隔，示例词语与编码均按 86 五笔填写。
+</p>
+<pre><code>五笔	ggtt	100
+输入法	ltif	100</code>
+</pre>
+<p>下载和导入均按 86 规则生成编码。重复词条优先使用用户指定或已有的编码，缺码词会计入跳过数。导入后请检查结果提示。
+</p>
+</section>
+<section id="section-4">
+<h2>在 iPhone 或 iPad 上管理
+</h2>
+<p>打开 WA 五笔主 App，在设置中进入「管理词库」，可在线下载搜狗、Rime、清华词库，也可导入本地文件。允许完全访问后，键盘扩展的词库编辑和学习可以写入主 App 的共享词库。
+</p>
+</section>
+<nav class="doc-pagination" aria-label="前后文档"><a href="/docs/appearance.html"><span>上一篇</span>外观与候选顺序</a><a href="/docs/learning.html"><span>下一篇</span>用户词库与自动加词</a>
+</nav>
+</article>
+<aside class="doc-toc">
+<nav aria-label="本页目录">
+<h2>本页内容
+</h2><a href="#section-1">在线安装</a><a href="#section-2">支持的本地格式</a><a href="#section-3">文本词表怎么写</a><a href="#section-4">在 iPhone 或 iPad 上管理</a>
+</nav>
+</aside>
+</main>
+<footer class="shell footer"><a href="/" class="wordmark"><img src="/logo.png" width="36" height="36" alt=""> WA 五笔</a>
+<div class="site-footer-links"><a href="/docs/">使用文档</a><a href="/privacy.html">隐私政策</a><a href="https://github.com/huluxiaohuowa/wa-wubi/issues">反馈问题</a><a href="https://github.com/huluxiaohuowa/wa-wubi">GitHub</a>
+</div>
+</footer>
+</body>
+</html>
